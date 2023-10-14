@@ -3,7 +3,7 @@
   background-color: #282c34;
 }
 
-.login{
+.Container{
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -13,26 +13,29 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.login box{
+.Container div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border: 2px solid white;
-
-
+  margin: 40px;
+  padding: 20px;
 }
-.login input{
+.Container input{
   margin: 20px;
+}
+.Container div span{
+  color: red;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pnf h2 span{
+  color: red;
+  letter-spacing: 5px;
 }
 
 #button{

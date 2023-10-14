@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import swal from 'sweetalert';
+import {useNavigate} from "react-router-dom";
 
-export const Interface = () => {
+export function Interface() {
+  const navigate = useNavigate();
+  function handleClick(){
+    navigate("/")
+  }
 
   const [user, modifyUser] = useState("INPUTNAME");
-  const [valid, setValid] = useState(false);
-
   const handleUserChange = (e) => {
     swal("Personal Question: What's the name of your cat?", {
       content: "input",
@@ -13,7 +16,6 @@ export const Interface = () => {
       .then((value) => {
 
         if (value === "Iggy") {
-          setValid(true);
           swal(`Success! You typed: ${value}`, {
             icon: "success"
           })
@@ -21,9 +23,7 @@ export const Interface = () => {
               content: "input",
             })
               .then((value => {
-                if (valid) {
                   modifyUser(value);
-                }
               })));
         } else {
           swal({
@@ -35,22 +35,26 @@ export const Interface = () => {
       });
   };
   return (
+    <div className="Container">
     <div class="container m-5">
       <div class="display-1">
-        <p>Settings</p>
+        <p>DashBoard</p>
       </div>
       <div class="p-3 border double border-dark rounded">
 
         <div>
+          <h5 className="">Username: {user}</h5>
           <button class="btn btn-primary float-end" onClick={handleUserChange}>Change</button>
-          <h5 class="">Username : {user}</h5>
+
         </div>
         <div class="pt-3">
+          <h5 className="">Password: *****</h5>
           <button class="btn btn-primary float-end">Change</button>
-          <h5 class="">Password : *****</h5>
-        </div>
 
+        </div>
       </div>
+      <button className="btn btn-primary float-end" onClick={handleClick}>Logout</button>
+    </div>
     </div>
   );
 };
