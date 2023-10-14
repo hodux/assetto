@@ -1,17 +1,14 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { Interface } from './Components/Interface';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <div className="login">
-          <box>
-        Login <input/>
-        Password <input/>
-          </box>
-      </div>
+    <div class="">
+      <Interface/>
     </div>
   );
-
 }
 
 export default App;
