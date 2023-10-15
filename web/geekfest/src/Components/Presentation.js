@@ -9,7 +9,7 @@ export default function Presentation(){
     }
     return(
         <div className="Container">
-            <h2 className="title">Le blogue Asseto</h2>
+            <h2 className="title">Le blogue Assetto</h2>
 
             <p className="paragraphe">
                 Afin de répondre à la question qui est de créer une solution innovante pour protéger les données sensibles
