@@ -122,7 +122,6 @@ export function Interface() {
 
   const devFunction = (e) => {
     console.log(password)
-    console.log(Math.floor(Math.random()*4))
   };
 
   return (
