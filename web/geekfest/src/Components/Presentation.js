@@ -16,8 +16,8 @@ export default function Presentation(){
                 contre les cyberattaques et assurer la confidentialité des données.
             </p>
             <p className="paragraphe">
-                Nous avons décidé implanté notre solution dans un site web dont le but est protéger les données sensibles et
-                leurs confidentialités avec des questions de sécurité. Les données sensibles dans ce cas-ci est le username et le password.
+                Nous avons décidé implanté notre solution dans un site web dont le but est de protéger les données sensibles et
+                leurs confidentialités avec des questions de sécurité. Les données sensibles dans ce cas-ci sont le username et le password.
                 Pour le développement du site web, nous avons utilisé React avec les librairies "react-router-dom" et 'sweetalert'.
             </p>
             <button onClick={handleClick} className="btn btn-primary float-end button">Return</button>
