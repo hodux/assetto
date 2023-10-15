@@ -41,4 +41,21 @@
 #button{
   display: flex;
   justify-content: flex-end;
+
+}
+.button{
+  margin: 5%;
+}
+.title{
+  font-size: Larger;
+  margin: 5%;
+  letter-spacing: 3px;
+  border:2px solid white;
+  padding: 3%;
+}
+.paragraphe{
+  font-size: smaller;
+  text-align: justify-all;
+  padding: 2% 10% 0 10%;
+
 }

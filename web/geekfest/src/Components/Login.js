@@ -40,7 +40,10 @@ function DataValidation(inputValues) {
 
     return errors;
 }
-
+function handleClick(event){
+    event.preventDefault()
+    navigate("/presentation")
+}
 function handleSubmit(event){
 
     event.preventDefault()
@@ -59,10 +62,11 @@ function handleSubmit(event){
     <form onSubmit={handleSubmit} className="Container">
         <div>
             <span>{formErrors.login}</span>
-            Login <input onChange={handleChange} type="username" name={"login"} value={formValues.login}/>
+            Login <input onChange={handleChange}  className="border-0 text-white bg-transparent" type="username" name={"login"} value={formValues.login}/>
             <span>{formErrors.password}</span>
-            Password <input onChange={handleChange} type="password" name={"password"} value={formValues.password}/>
-            <button onClick={handleSubmit}> Connect </button>
+            Password <input onChange={handleChange} className="border-0 text-white bg-transparent" type="password" name={"password"} value={formValues.password}/>
+            <button className="btn btn-primary float-end button" onClick={handleSubmit}> Connect </button>
+            <button className="btn btn-primary float-end button" onClick={handleClick}> Blogue </button>
         </div>
         <>{wrongLogin}</>
 
