@@ -15,8 +15,8 @@ export function Interface() {
     2: "Personal Question: What's the name of your turtle?",
     3: "Personal Question: What's the name of your dolphin?",
   } 
-  const [user, modifyUser] = useState("INPUTNAME");
-  const [password, modifyPasswd] = useState("INPUTPASSWD");
+  const [user, modifyUser] = useState(location.state.user);
+  const [password, modifyPasswd] = useState(location.state.password);
   const randomQuestion = Questions[Math.floor(Math.random()*4)];
 
   const handleUserChange = (e) => {
