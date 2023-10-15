@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import swal from 'sweetalert';
-import {useNavigate} from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export function Interface() {
+  const location = useLocation();
   const navigate = useNavigate();
   function handleClick(){
     navigate("/")
   }
 
-  const [user, modifyUser] = useState("INPUTNAME");
+  const [user, modifyUser] = useState(location.state.user);
   const handleUserChange = (e) => {
     swal("Personal Question: What's the name of your cat?", {
       content: "input",
@@ -48,7 +49,7 @@ export function Interface() {
 
         </div>
         <div class="pt-3">
-          <h5 className="">Password: *****</h5>
+          <h5 class="">Password:<input class="border-0 text-white bg-transparent" value={location.state.password} type="password" name="password"/></h5>
           <button class="btn btn-primary float-end">Change</button>
 
         </div>

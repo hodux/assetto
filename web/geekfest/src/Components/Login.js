@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Navigate, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 // import ListUserLogin from "../../data/listUserLogin";
 function Login() {
@@ -50,7 +50,7 @@ function handleSubmit(event){
         setAuthenticated(true);
         localStorage.setItem("authenticated", true);
         console.log("Sucess")
-        navigate("/dashboard")
+        navigate("/dashboard ", {state: { user:formValues.login, password:formValues.password}})
     }else{
         setWrongLogin("Le login ou le mot de passe n'est pas bon!");
     }
